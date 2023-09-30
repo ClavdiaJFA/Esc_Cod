@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <style>
+        form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+    </style>
+    <title>Formulario</title>
+</head>
+<body>
+    <img id="remoteImage" src="" alt="">
+    <form>
+        <ul>
+            <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name"/>
+    </li>
+    <li>
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" date="date"/>
+    </li>
+    <li>
+        <label for="range">Años de experiencia:</label>
+        <input class="range" name="range" id="range" type="range" min="0" value="0" max="10" step="1" list="ticks" oninput="Output1.value = range.value" />
+<output id="Output1">0</output>
+    </li>
+    <li>
+        <label for="msg">Comentarios:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </li>
+    <li>
+        <label for="submit">Enviar:</label>
+        <input type="submit" id="submit" submit="submit"/>
+    </li>
+    <li>
+        <label for="reset">Borrar:</label>
+        <input type="reset" id="reset" reset="reset"/>
+        </li>
+    </ul>
+    </form>
+    <script src=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
